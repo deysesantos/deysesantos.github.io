@@ -1,0 +1,11 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0f1a;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 60px;
+  background: linear-gradient(135deg, #7f5af0, #ff6ac1);
+}
