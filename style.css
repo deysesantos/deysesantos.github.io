@@ -1,122 +1,53 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* ===== DASHBOARDS ===== */
 
-/* BODY */
-body {
-  background: radial-gradient(circle at top, #0b0b16, #000);
-  color: #fff;
-  line-height: 1.6;
-}
-
-/* HEADER */
-.header-gradient {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #8a5cff, #ff73c7);
-}
-
-.header-gradient h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-
-.header-gradient p {
-  font-size: 18px;
-  opacity: 0.9;
-}
-
-/* PROJECT SECTION */
 .project {
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 0 20px;
+  padding: 60px 10%;
 }
 
-.project h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
+.section-title {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  color: #ff6ac1;
 }
 
-.project h3 {
-  margin: 35px 0 20px;
-  font-size: 22px;
-}
-
-.project p {
-  margin-bottom: 15px;
-  opacity: 0.9;
-}
-
-/* MEDIA GRID */
 .media-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  margin: 20px 0 35px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
 }
 
 .media-box {
-  background: #0f0f1a;
+  background: #1a1a2e;
   border-radius: 18px;
-  padding: 15px;
-  box-shadow: 0 0 30px rgba(138,92,255,0.35);
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(127, 90, 240, 0.2);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease;
 }
 
-.media-box:hover {
-  transform: translateY(-6px);
+.media-label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #7f5af0;
 }
 
-.media-box img,
+/* PRINT */
+.media-box img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* VIDEO */
 .media-box iframe {
   width: 100%;
-  height: 260px;
-  border-radius: 14px;
-  object-fit: cover;
+  height: 280px;
+  border-radius: 12px;
   border: none;
 }
 
-.media-box span {
-  margin-top: 10px;
-  font-size: 14px;
-  opacity: 0.7;
-}
-
-/* TECHNOLOGIES */
 .tech {
-  margin-top: 20px;
-  font-size: 15px;
+  margin-top: 30px;
   opacity: 0.85;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 25px;
-  opacity: 0.6;
-  font-size: 14px;
-}
-
-/* RESPONSIVO */
-@media (max-width: 900px) {
-  .media-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .media-box img,
-  .media-box iframe {
-    height: 220px;
-  }
-
-  .header-gradient h1 {
-    font-size: 32px;
-  }
 }
