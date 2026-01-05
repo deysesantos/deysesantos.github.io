@@ -1,145 +1,122 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0f0f1a;
-  color: #ffffff;
+  background: radial-gradient(circle at top, #0b0b16, #000);
+  color: #fff;
+  line-height: 1.6;
 }
 
-/* ===== HEADER ===== */
-header {
+/* HEADER */
+.header-gradient {
+  padding: 60px 20px;
   text-align: center;
-  padding: 70px 20px;
-  background: linear-gradient(135deg, #7f5af0, #ff6ac1);
+  background: linear-gradient(135deg, #8a5cff, #ff73c7);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 40px;
+.header-gradient h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
-header p {
+.header-gradient p {
   font-size: 18px;
   opacity: 0.9;
 }
 
-/* ===== SEÇÕES ===== */
-section {
-  padding: 60px 10%;
-}
-
-h2, h3 {
-  color: #ff6ac1;
-}
-
-.about p {
-  max-width: 700px;
-  line-height: 1.7;
-}
-
-/* ===== CARDS ===== */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  background: #1a1a2e;
-  border-radius: 18px;
-  padding: 25px;
-  box-shadow: 0 0 20px rgba(127,90,240,0.15);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: fadeUp 0.8s ease forwards;
-  opacity: 0;
-}
-
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.25s; }
-.card:nth-child(3) { animation-delay: 0.4s; }
-
-.card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 0 35px rgba(255,106,193,0.45);
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 15px;
-  color: #7f5af0;
-  font-weight: bold;
-  text-decoration: none;
-  position: relative;
-}
-
-.card a::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background: #ff6ac1;
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  transition: width 0.3s ease;
-}
-
-.card a:hover::after {
-  width: 100%;
-}
-
-/* ===== DASHBOARD PAGE ===== */
+/* PROJECT SECTION */
 .project {
-  max-width: 900px;
-  margin: auto;
-  background: #1a1a2e;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(127,90,240,0.2);
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
 }
 
-.dashboard-print {
-  width: 100%;
-  margin: 20px 0 40px;
+.project h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.project h3 {
+  margin: 35px 0 20px;
+  font-size: 22px;
+}
+
+.project p {
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+/* MEDIA GRID */
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin: 20px 0 35px;
+}
+
+.media-box {
+  background: #0f0f1a;
   border-radius: 18px;
-  box-shadow: 0 0 35px rgba(255,106,193,0.25);
+  padding: 15px;
+  box-shadow: 0 0 30px rgba(138,92,255,0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-.video-wrapper {
-  max-width: 720px;
-  margin: 0 auto 40px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(127,90,240,0.25);
+.media-box:hover {
+  transform: translateY(-6px);
 }
 
-.video-wrapper iframe {
+.media-box img,
+.media-box iframe {
   width: 100%;
-  height: 400px;
+  height: 260px;
+  border-radius: 14px;
+  object-fit: cover;
   border: none;
 }
 
-.back-link {
-  display: inline-block;
+.media-box span {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* TECHNOLOGIES */
+.tech {
   margin-top: 20px;
-  color: #ff6ac1;
-  font-weight: bold;
-  text-decoration: none;
+  font-size: 15px;
+  opacity: 0.85;
 }
 
-/* ===== ANIMAÇÃO ===== */
-@keyframes fadeUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 25px;
   opacity: 0.6;
+  font-size: 14px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-box img,
+  .media-box iframe {
+    height: 220px;
+  }
+
+  .header-gradient h1 {
+    font-size: 32px;
+  }
 }
