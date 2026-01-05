@@ -1,7 +1,35 @@
-/* ===== DASHBOARDS ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f1a;
+  color: #ffffff;
+}
 
-.project {
+/* HEADER */
+header {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #7f5af0, #ff6ac1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* SEÇÕES */
+section {
   padding: 60px 10%;
+}
+
+h2 {
+  color: #ff6ac1;
+  margin-bottom: 20px;
 }
 
 .section-title {
@@ -10,44 +38,54 @@
   color: #ff6ac1;
 }
 
-.media-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+/* STACK */
+.demo-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
 
+/* CARD */
 .media-box {
   background: #1a1a2e;
   border-radius: 18px;
   padding: 20px;
-  box-shadow: 0 0 25px rgba(127, 90, 240, 0.2);
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 0 30px rgba(127, 90, 240, 0.25);
 }
 
 .media-label {
   margin-bottom: 10px;
   font-weight: bold;
-  color: #7f5af0;
+  color: #ff6ac1;
 }
 
-/* PRINT */
+/* IMAGENS */
 .media-box img {
   width: 100%;
-  height: 280px;
-  object-fit: cover;
+  height: 360px;
+  object-fit: contain;
   border-radius: 12px;
+  background: #0f0f1a;
+  padding: 10px;
 }
 
 /* VIDEO */
 .media-box iframe {
   width: 100%;
-  height: 280px;
+  height: 360px;
   border-radius: 12px;
   border: none;
 }
 
+/* TEXTO FINAL */
 .tech {
   margin-top: 30px;
   opacity: 0.85;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.6;
 }
