@@ -108,3 +108,27 @@ footer {
   padding: 25px;
   opacity: 0.6;
 }
+/* ===== BOTÃO VOLTAR ===== */
+
+.back-container {
+  padding: 30px 10%;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid #7f5af0;
+  color: #7f5af0;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #7f5af0;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(127, 90, 240, 0.5);
+}
+
