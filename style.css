@@ -1,62 +1,50 @@
-/* ===== HOME / SOBRE ===== */
+/* ===== HOME / PROJETOS ===== */
+
 .about {
-  padding: 60px 10%;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.about p {
-  max-width: 800px;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-/* ===== PROJETOS (HOME) ===== */
 .projects {
-  padding: 60px 10%;
+  margin-top: 40px;
 }
 
-.projects h2 {
-  color: #ff6ac1;
-  margin-bottom: 30px;
-}
-
-/* GRID DE CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
+  margin-top: 40px;
 }
 
-/* CARD INDIVIDUAL */
 .card {
   background: #1a1a2e;
-  border-radius: 18px;
   padding: 30px 25px;
-  box-shadow: 0 0 25px rgba(127, 90, 240, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(127, 90, 240, 0.25);
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 35px rgba(127, 90, 240, 0.45);
+  box-shadow: 0 0 40px rgba(255, 106, 193, 0.45);
 }
 
 .card h3 {
-  margin-top: 0;
-  color: #7f5af0;
-  font-size: 22px;
+  color: #ff6ac1;
+  margin-bottom: 10px;
 }
 
 .card p {
   opacity: 0.85;
-  margin: 10px 0 20px;
+  margin-bottom: 20px;
 }
 
-/* BOTÃO DO CARD */
 .card a {
   display: inline-block;
-  padding: 10px 20px;
-  border-radius: 25px;
-  background: transparent;
+  padding: 10px 22px;
+  border-radius: 30px;
   border: 2px solid #7f5af0;
   color: #7f5af0;
   text-decoration: none;
@@ -67,5 +55,5 @@
 .card a:hover {
   background: #7f5af0;
   color: #ffffff;
-  box-shadow: 0 0 15px rgba(127, 90, 240, 0.6);
+  box-shadow: 0 0 20px rgba(127, 90, 240, 0.6);
 }
