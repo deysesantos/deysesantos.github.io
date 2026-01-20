@@ -62,8 +62,9 @@ h2, .section-title, .project h2 {
 /* ===== GRID DE CARDS ===== */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* aumentei min-width */
   gap: 30px;
+  align-items: stretch;
 }
 
 /* ===== CARD ===== */
@@ -74,6 +75,7 @@ h2, .section-title, .project h2 {
   box-shadow: 0 0 30px rgba(127, 90, 240, 0.25);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 220px; /* altura mínima para não colapsar */
 }
 
 .card:hover {
@@ -213,5 +215,9 @@ footer {
 
   section {
     padding: 40px 6%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr; /* uma coluna no mobile */
   }
 }
