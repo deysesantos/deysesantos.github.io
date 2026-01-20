@@ -167,4 +167,120 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* ===== BOTÃO VOLTAR ===== */
+.back-container {
+  margin: 40px 10%;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 2px solid #7f5af0;
+  color: #7f5af0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: #7f5af0;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(127, 90, 240, 0.6);
+}
+
+/* ===== PROJETO ===== */
+.project {
+  padding: 60px 10%;
+}
+
+.project h2 {
+  color: #ff6ac1;
+  margin-bottom: 15px;
+}
+
+.project p {
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* ===== TÍTULOS INTERNOS ===== */
+.section-title {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #ff6ac1;
+}
+
+/* ===== GRID PRINT + VÍDEO ===== */
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.media-box {
+  background: #1a1a2e;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.media-label {
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #7f5af0;
+}
+
+/* mídia */
+.media-box img,
+.media-box iframe,
+.media-box video {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* ===== MODELAGEM ===== */
+.modelagem-box {
+  background: #1a1a2e;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  margin-top: 20px;
+}
+
+.modelagem-box img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.modelagem-desc {
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* ===== TECNOLOGIAS ===== */
+.tech {
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    padding: 40px 6%;
+  }
+
+  .back-container {
+    margin: 30px 6%;
+  }
+}
+
 
