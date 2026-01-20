@@ -1,16 +1,23 @@
-/* ===== RESET ===== */
+/* ===== RESET / BASE ===== */
+:root {
+  --primary: #7f5af0;
+  --secondary: #ff6ac1;
+  --bg-dark: #1a1a2e;
+  --text-light: #ffffff;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #0f0f1a;
-  color: #ffffff;
+  color: var(--text-light);
 }
 
 /* ===== HEADER ===== */
 header {
   text-align: center;
   padding: 70px 20px;
-  background: linear-gradient(135deg, #7f5af0, #ff6ac1);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
 header h1 {
@@ -23,105 +30,105 @@ header p {
   opacity: 0.9;
 }
 
-/* ===== BOTÃO VOLTAR ===== */
-.back-container {
-  padding: 40px 10%;
-}
-
-.back-button {
-  display: inline-block;
-  padding: 10px 24px;
-  border-radius: 30px;
-  border: 2px solid #7f5af0;
-  color: #7f5af0;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.back-button:hover {
-  background: #7f5af0;
-  color: #fff;
-  box-shadow: 0 0 20px rgba(127,90,240,0.6);
-}
-
 /* ===== SEÇÕES ===== */
-.project {
+section {
   padding: 60px 10%;
 }
 
-.project h2 {
-  color: #ff6ac1;
-  margin-bottom: 15px;
+h2, .section-title, .project h2 {
+  color: var(--secondary);
 }
 
-.project p {
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-/* ===== TÍTULOS ===== */
 .section-title {
-  margin: 40px 0 20px;
-  color: #ff6ac1;
+  margin: 50px 0 20px;
 }
 
-/* ===== GRID PRINT + VÍDEO ===== */
-.media-grid {
+/* ===== SOBRE ===== */
+.about {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== PROJETOS ===== */
+.projects {
+  margin-top: 60px;
+}
+
+.projects h2 {
+  margin-bottom: 30px;
+}
+
+/* ===== GRID DE CARDS ===== */
+.cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
-.media-box {
-  background: #1a1a2e;
-  padding: 20px;
-  border-radius: 18px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+/* ===== CARD ===== */
+.card {
+  background: var(--bg-dark);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(127, 90, 240, 0.25);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.media-label {
-  margin-bottom: 10px;
-  color: #7f5af0;
-  font-weight: bold;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(255, 106, 193, 0.45);
 }
 
-.media-box img,
-.media-box iframe,
-.media-box video {
-  width: 100%;
-  height: 300px;
-  border-radius: 12px;
-  border: none;
-  object-fit: cover;
+.card h3 {
+  margin: 0 0 10px;
+  color: var(--secondary);
 }
 
-/* ===== MODELAGEM ===== */
-.modelagem-box {
-  background: #1a1a2e;
-  padding: 25px;
-  border-radius: 18px;
-  margin-top: 20px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
-}
-
-.modelagem-box img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-.modelagem-desc {
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-/* ===== TECNOLOGIAS ===== */
-.tech {
-  margin-top: 25px;
-  font-size: 14px;
+.card p {
   opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+/* ===== BOTÃO DENTRO DOS CARDS ===== */
+.card a {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.card a:hover {
+  background: var(--primary);
+  color: var(--text-light);
+  box-shadow: 0 0 20px rgba(127, 90, 240, 0.6);
+}
+
+/* ===== BOTÕES GENÉRICOS ===== */
+.btn, .back-button {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover, .back-button:hover {
+  background: var(--primary);
+  color: var(--text-light);
+  box-shadow: 0 0 20px rgba(127, 90, 240, 0.6);
+}
+
+.back-container {
+  margin: 40px 10%;
 }
 
 /* ===== FOOTER ===== */
@@ -131,24 +138,80 @@ footer {
   opacity: 0.6;
 }
 
+/* ===== VISUALIZAÇÃO DO PROJETO ===== */
+.project-media, .media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.media-box, .modelagem-box {
+  background: var(--bg-dark);
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.media-label {
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* Elementos de mídia */
+.project-media img,
+.project-media iframe,
+.project-media video,
+.media-box img,
+.media-box iframe,
+.media-box video,
+.modelagem img,
+.modelagem-box img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+/* ===== PROJETO ===== */
+.project {
+  padding: 60px 10%;
+}
+
+.project p, .modelagem-desc {
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* ===== TECNOLOGIAS ===== */
+.tech {
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
 /* ===== RESPONSIVO ===== */
 @media (max-width: 900px) {
-  .media-grid {
+  .media-grid, .project-media {
     grid-template-columns: 1fr;
   }
 
+  .project {
+    padding: 40px 6%;
+  }
+
+  .back-container {
+    margin: 30px 6%;
+  }
+}
+
+@media (max-width: 768px) {
   header h1 {
     font-size: 32px;
   }
 
-  .project,
-  .back-container {
+  section {
     padding: 40px 6%;
-  }
-
-  .media-box img,
-  .media-box iframe,
-  .media-box video {
-    height: 220px;
   }
 }
